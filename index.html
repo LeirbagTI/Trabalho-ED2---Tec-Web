@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="tudo">
+        <div id="nome">
+            <div id="nome-erro">
+                <label id="nome">Nome</label>
+            </div>
+            <input id="input-nome" type="text" onkeyup="erroNome()">
+            <p id="erroNome"></p>
+        </div>
+        <div id="sobrenome">
+            <label>Sobrenome</label>
+            <br>
+            <input type="text" id="input-sobrenome" onkeyup="erroSobrenome()">
+            <p id="erroSobrenome"></p>
+        </div>
+        
+        <div id="cpf">
+            <label>CPF</label>
+            <br>
+            <input type="text" id="input-cpf" inputmode="numeric" pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" autocomplete="off" minlength="11" maxlenght="11" onkeyup="erroCPF()">
+            <p id="erroCPF"></p>
+        </div>
+        <div id="email">
+            <label>E-mail</label>
+            <br>
+            <input type="email" id="input-email" onkeyup="validarEmail()">
+            <p id="erroEmail"></p>
+        </div>
+        
+        <div id="senha">
+            <label>Senha</label>
+            <br>
+            <input type="password" id="input-senha" minlength="6" required pattern="[0-9a-fA-F]{4,8}" onkeyup="erroSenha()">
+            <p id="erroSenha"></p>
+        </div>
+        <div id="tel">
+            <label>Telefone</label>
+            <br>
+            <input type="text" id="input-telefone" onkeyup="erroTelefone()">
+            <p id="erroTelefone"></p>
+        </div>
+        <div id="sexo">
+            <label>Sexo</label>
+            <br>
+            <form name="myform">
+                <input type="radio" id="input-sexoM" name="sexo">Masculino
+                <input type="radio" id="input-sexoF" name="sexo"> Feminino
+            </form>
+
+            <p id="erroSexo"></p>
+        </div>
+        <br>
+        <button onclick="validacao()" id="enviar">Enviar</button>
+    </div>
+
+<script src="script.js"></script>    
+</body>
+</html>

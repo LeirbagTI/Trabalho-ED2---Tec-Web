@@ -1,0 +1,19 @@
+#tudo{
+    align-items: center;
+    text-align: center;
+    border: 2px solid;
+}
+
+p{
+    margin-left: 10px; 
+    display: none; 
+    color: red;
+}
+
+#nome, #sobrenome, #cpf, #email, #senha, #tel, #sexo, #enviar {
+    margin-bottom: 10px;
+}
+
+label{
+    font-weight: bolder;
+}
